@@ -40,7 +40,8 @@ def calculate(expression):
             operations.pop()
 
         else:
-            while len(operations) > 0 and operations[-1] != "(" and priority[operations[-1]] >= priority[expression[i]]:
+            while len(operations) > 0 and operations[-1] != "(" and\
+                        priority[operations[-1]] >= priority[expression[i]]:
                 val1 = values.pop()
                 val2 = values.pop()
                 op = operations.pop()
